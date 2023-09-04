@@ -67,9 +67,8 @@ button {
   padding: 0 15px;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   /* padding: 24px 0; */
 }
 
@@ -115,6 +114,9 @@ button {
 }
 .nav-link:hover,
 .nav-link:focus {
+  color: #404bbf;
+}
+.active-page {
   color: #404bbf;
 }
 .active-page::after {
@@ -262,7 +264,7 @@ button {
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .team-member:hover .member-social-link,
-.team-member:hover .member-social-link {
+.team-member:focus .member-social-link {
   background-color: #404bbf;
 }
 
@@ -300,6 +302,7 @@ button {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .member-social-icon {
   fill: #f4f4fd;
@@ -328,8 +331,8 @@ button {
 .project-item {
   width: calc((100% - 48px) / 3);
 }
-.project-link:hover .overlay,
-.project-link:focus .overlay {
+.project-item:hover .overlay,
+.project-item:focus .overlay {
   transform: translateY(0);
 }
 .project-image-wrapper {
@@ -353,6 +356,10 @@ button {
 
   transform: translateY(100%);
   transition: transform 250ms;
+}
+
+.project-item {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-item:hover,
 .project-item:focus {
@@ -384,15 +391,17 @@ button {
   padding: 100px 0;
 }
 .footer-container {
-  display: flex;
-  gap: 120px;
+  /* display: flex;
+  gap: 120px; */
+  align-items: baseline;
 }
 .footer .logo-element {
   color: #f4f4fd;
 }
-.footer .logo {
+.footer-logo {
   margin-bottom: 16px;
   display: inline-block;
+  margin-right: 120px;
 }
 .footer-text {
   color: var(--cloud, #f4f4fd);
@@ -406,10 +415,11 @@ button {
 }
 .social-header {
   margin-bottom: 16px;
-  color: #fff;
+  color: var(--WHITE, #fff);
+  font-size: 16px;
   font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.32;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 .social-list-link {
@@ -421,9 +431,13 @@ button {
   color: #f4f4fd;
   background-color: #4d5ae5;
   border-radius: 50%;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-list-icon {
+  fill: #f4f4fd;
 }
 
-.social-list-link:hover {
+.social-list-link:hover,
+.social-list-link:focus {
   background-color: #31d0aa;
 }
