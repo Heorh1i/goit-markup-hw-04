@@ -266,6 +266,9 @@ button {
 .team-member:focus .member-social-link {
   background-color: #404bbf;
 }
+.team-member:focus .member-social-link {
+  background-color: #404bbf;
+}
 
 .member-info {
   padding: 32px 0;
@@ -396,9 +399,10 @@ button {
 .footer .logo-element {
   color: #f4f4fd;
 }
-.footer-logo {
+.footer-logo-container {
   margin-bottom: 16px;
   display: inline-block;
+
   margin-right: 120px;
 }
 .footer-text {
