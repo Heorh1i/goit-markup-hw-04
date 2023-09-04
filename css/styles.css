@@ -152,13 +152,15 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/images/background/people-office.jpg);
+    url(../images/background/people-office.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-origin: padding-box;
   background-clip: padding-box;
   max-width: 1440px;
   background-position: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-header {
@@ -175,6 +177,7 @@ button {
 .order-service {
   background-color: #4d5ae5;
   color: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.64px;
@@ -399,6 +402,7 @@ button {
 .footer .logo-element {
   color: #f4f4fd;
 }
+
 .footer-logo-container {
   margin-right: 120px;
 }
@@ -407,6 +411,7 @@ button {
   letter-spacing: 0.32px;
   line-height: 1.5;
   width: 264px;
+  margin-top: 16px;
 }
 .social-list {
   display: flex;
